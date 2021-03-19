@@ -45,6 +45,18 @@ class MessagesController extends AdminController
 //        $grid->column('created_at', __('创建时间'));
 //        $grid->column('updated_at', __('更新时间'));
 
+        $grid->filter(function ($filter) {
+
+            // 去掉默认的id过滤器
+            $filter->disableIdFilter();
+            $filter->expand();//默认展开搜索栏
+
+            $filter->between('update_time', '更新时间')->datetime();
+            $filter->like('phone', '手机号');
+
+
+        });
+
         return $grid;
     }
 
