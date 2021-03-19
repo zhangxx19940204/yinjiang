@@ -51,8 +51,8 @@ class MessagesController extends AdminController
             $filter->disableIdFilter();
             $filter->expand();//默认展开搜索栏
 
-            $filter->between('update_time', '更新时间')->datetime();
             $filter->like('phone', '手机号');
+            $filter->between('update_time', '更新时间')->datetime();
 
 
         });
