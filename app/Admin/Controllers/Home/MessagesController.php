@@ -39,11 +39,11 @@ class MessagesController extends AdminController
         $grid->column('area', __('面积'));
         $grid->column('budget', __('预算'));
         $grid->column('is_food', __('是否从事餐饮'));
-//        $grid->column('update_time', __('Update time'));
+        $grid->column('update_time', __('更新时间'));
 //        $grid->column('delete_time', __('Delete time'));
         $grid->column('is_send_mail', __('是否已发送邮箱'));
-        $grid->column('created_at', __('创建时间'));
-        $grid->column('updated_at', __('更新时间'));
+//        $grid->column('created_at', __('创建时间'));
+//        $grid->column('updated_at', __('更新时间'));
 
         return $grid;
     }
